@@ -7,7 +7,27 @@
 </head>
 <body>
   <script>
-    
+    'use strict';
+    const content = "[内容]"
+    const janru = "[ジャンル]"
+    console.log('--------------');
+    console.log('現在持っているタスク一覧');
+    console.log('--------------');
+    const todo = ['[内容]机を片付ける、[ジャンル]掃除', '[内容]牛乳を買う、[ジャンル]買い物', '[内容]散歩する、[ジャンル]運動'];
+    for (let i = 0; i < todo.length; i++) {
+    console.log(`${i}: ${todo[i]}`);
+    }
+    const list = prompt('タスクを入力してください');
+    const jaru = prompt('ジャンルを入力してください');
+    alert('新しいタスクを追加しました');
+    todo.push(content + list + '、' + janru + jaru);
+    console.log('--------------------');
+    console.log('現在持っているタスク一覧');
+    console.log('--------------------');
+    for (let i = 0; i < todo.length; i++) {
+    console.log(`${i}: ${todo[i]}`);
+    }
+    const lists = prompt('「確認、追加、削除、終了」の4つのいずれかを入力してください');
   </script>
 </body>
 </html>
