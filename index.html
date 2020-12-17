@@ -18,34 +18,19 @@
     {content: '牛乳を買う', genre: '買い物'},
     {content: '散歩する', genre: '運動'},
     ];
-    for (let i = 0; i < 1; i++) {
-    console.log(`${i}: ${content}${todos[0].content}` + "、",`${genre}${todos[0].genre}`);
-    }
-    for (let i = 1; i < 2; i++) {
-    console.log(`${i}: ${content}${todos[1].content}` + "、",`${genre}${todos[1].genre}`);
-    }
-    for (let i = 2; i < 3; i++) {
-    console.log(`${i}: ${content}${todos[2].content}` + "、",`${genre}${todos[2].genre}`);
+    for (let i = 0; i < todos.length; i++) {
+        console.log(`${i}: ${content}${todos[i].content}` + "、",`${genre}${todos[i].genre}`);
     }
     let myObject = {}
     myObject.content = prompt('タスクを入力してください');
-    myObject.genre = prompt('ジャンルを入力してください');
+    myObject.genre = prompt('ジャンルを入力してください');  
     const todolist = todos.push(myObject);
     alert('新しいタスクを追加しました');
     console.log('--------------------');
     console.log('現在持っているタスク一覧');
     console.log('--------------------');
-    for (let i = 0; i < 1; i++) {
-    console.log(`${i}: ${content}${todos[0].content}` + "、",`${genre}${todos[0].genre}`);
-    }
-    for (let i = 1; i < 2; i++) {
-    console.log(`${i}: ${content}${todos[1].content}` + "、",`${genre}${todos[1].genre}`);
-    }
-    for (let i = 2; i < 3; i++) {
-    console.log(`${i}: ${content}${todos[2].content}` + "、",`${genre}${todos[2].genre}`);
-    }
-    for (let i = 3; i < 4; i++) {
-    console.log(`${i}: ${content}${myObject.content}` + "、",`${genre}${myObject.genre}`);
+    for (let i = 0; i < todos.length; i++) {
+        console.log(`${i}: ${content}${todos[i].content}` + "、",`${genre}${todos[i].genre}`);
     }
   </script>
 </body>
