@@ -7,7 +7,31 @@
 </head>
 <body>
   <script>
-    
+    'use strict';
+    const content = "[内容]"
+    const genre = "[ジャンル]"
+    console.log('--------------');
+    console.log('現在持っているタスク一覧');
+    console.log('--------------');
+    const todos = [
+    {content: '机を片付ける', genre: '掃除'},
+    {content: '牛乳を買う', genre: '買い物'},
+    {content: '散歩する', genre: '運動'},
+    ];
+    for (let i = 0; i < todos.length; i++) {
+        console.log(`${i}: ${content}${todos[i].content}` + "、",`${genre}${todos[i].genre}`);
+    }
+    let myObject = {}
+    myObject.content = prompt('タスクを入力してください');
+    myObject.genre = prompt('ジャンルを入力してください');  
+    const todolist = todos.push(myObject);
+    alert('新しいタスクを追加しました');
+    console.log('--------------------');
+    console.log('現在持っているタスク一覧');
+    console.log('--------------------');
+    for (let i = 0; i < todos.length; i++) {
+        console.log(`${i}: ${content}${todos[i].content}` + "、",`${genre}${todos[i].genre}`);
+    }
   </script>
 </body>
 </html>
